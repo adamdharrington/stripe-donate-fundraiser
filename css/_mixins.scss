@@ -1,0 +1,90 @@
+/*
+* * * Layout Mixins
+* - - - Breakpoints  =  break(break or pixel-int)
+* - - - Clearfix     =  clearfix()
+* - - - Columns      =  column(column-count, margin-pixels)
+*/
+
+
+@mixin break($point) {
+  // Use Bootstrap's lingo here
+  $extra-small: 400px;
+  $small: 750px;
+  $medium: 970px;
+  $large: 1170px;
+  @if $point == xxs {
+    @media (max-width: $extra-small) { @content; }
+  }
+  @if $point == xs {
+    @media (max-width: $small) { @content; }
+  }
+  @else if $point == sm {
+    @media (min-width: $small) { @content; }
+  }
+  @else if $point == md {
+    @media (min-width: $medium)  { @content; }
+  }
+  @else if $point == lg {
+    @media (min-width: $large)  { @content; }
+  }
+  @else {
+    @media (min-width: $point)  { @content; }
+  }
+}
+@mixin clearfix(){
+  &::before, &::after {
+    display: table;
+    content: " ";
+    width: 100%;
+  }
+}
+.align-right{
+  text-align: right;
+}
+.align-center{
+  text-align: center;
+}
+.align-left{
+  text-align: left;
+}
+@mixin column($cols:2,$margin: 2em){
+  .col#{$cols}{
+    width: 100%;
+    display: block;
+    @include break(md){
+      width: (100% / $cols) - 1;
+      padding-right: $margin;
+      display: inline-block;
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+    @include break(lg) {
+      width: (100% / $cols) - 1;
+      padding-right: $margin;
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+  .col#{$cols}-d{
+    $ratio : ((1 / $cols) * 2) + 1;
+    width: 100%;
+    display: block;
+    @include break(md){
+      width: (100% / $ratio) - 1;
+      padding-right: $margin;
+      display: inline-block;
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+    @include break(lg) {
+      width: (100% / $ratio) - 1;
+      padding-right: $margin;
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@charset "utf-8";
+#stripe-donate{
+  width: 100%;
+  overflow: hidden;
+  .form-title {
+    margin: 0 15px;
+  }
+  .lock{
+    width: 20px;
+    height: 21px;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyMDgyNTdCNjg1NTcxMUUyOTlFQ0RBOTNDQ0U4NDM0OSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyMDgyNTdCNzg1NTcxMUUyOTlFQ0RBOTNDQ0U4NDM0OSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjIwODI1N0I0ODU1NzExRTI5OUVDREE5M0NDRTg0MzQ5IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjIwODI1N0I1ODU1NzExRTI5OUVDREE5M0NDRTg0MzQ5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mNywJgAAApxJREFUeNrsVE1v00AQnV079VeE6sSWmgoRUglBoVAKJ65UwJUfAhfO3MqxBw78ECQ4c0VFFHpAKYqC4xqqOh+0aZMGO7G9zGwSVERP9AgjxZv1vnkz82bWLE1TQGP04JyLOI6h3+tB0XFgx/fvNJvNx0mSXGaMCU3TPjmu+6JQKLwHIcDK50GQr8DNxNiUEI1WQft+v697nveyGYYP4ngIisIlmM6QFEql0usri4sPdV0nZyZOIaTsIMsyub7b2Nj6tru7rKOzqqqQpZmsgc6SUQLRMIaFSuXNzZWVVcweThqfpAej0Ug6+I3GMyKzTBMzU4AkECKTpFEUgZpTwTQM8BqNuw3PW6OA5Dv9/SJMcLO/v3+uXq8/ySkqcMYlmW3bH69eQ7u+dNuetauDwUAGUvDc9/1HiNEoyymhOi3dME3R6XTuoYNBOh0PjqFSqXy+sbx8q3twAKZlQblcXvqwuekFQXDR0A04PDycRfx9DPqK5JKSTZohy9nZCS5Q9GnWSPK83W7TRjaDmmZZ1rrsAbrR2u12L2XYB8pOEg6xLAKGYQi9oyNQsVyaBdMwUU8/Rp2ASkqSFIi8VqsdW6Ylgxqo5dcgENVqFUgK4iINeavVOk8ZOK5jj5KRBA+xk3bBLuJ4gMKV8vdOu0ykrusWKRsyCpTP5+3S/DxlW2Gca8z74j3d3q6uUTSyOIqBcZzVTICma+OGTUaDOirl+RGNMVjyzMwMYrCBKNlcaW5d7XYPFiIaDSTgOMCkIQHpPzmSLuN7NA72G4Zz+Y4waZZSk4pqLpeDHEam+ZJiToZ+Ssont+SknYZhKQPi+hN9RvtP+C8QqkO8RjTU48E6A5MYX0XVcZy34d7eKgMWMIWJvyXDm7KAn7GtnwIMAMKBeupY49y9AAAAAElFTkSuQmCC");
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+  .container, .row{
+    position: relative;
+  }
+  .row [data-role=body]{
+    margin-bottom: 50px;
+  }
+  .pages-wrap{
+    width: 300%;
+    margin-left:0;
+  }
+  form{
+    padding: 15px;
+    margin-bottom: 45px;
+  }
+  .halfies {
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    &:first-of-type {
+      padding-right: 10px;
+    }
+  }
+  .input-group.recurring{
+    display: inline-block;
+    .active-button{
+      background-color: #5CB85C;
+      color: #fff;
+      border-color: #2B892B;
+    }
+  }
+  .input-group.amounts {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    margin: 2px;
+    button{
+      width: 5em;
+    }
+  }
+  .other-amount{
+    margin-top: 16px;
+    .form-control{
+      float: none;
+    }
+  }
+  .steps-list {
+    ul {
+      margin-top: .5em;
+      margin-left: 15px;
+      padding-left: 0;
+      li {
+        background-color: #FAFAFA;
+        border: 1px solid #E5E5E5;
+        color: #8C8C8C;
+        font-weight: 900;
+        width: 2em;
+        height: 2em;
+        text-align: center;
+        line-height: 1.9;
+        border-radius: 100%;
+        display: inline-block;
+        list-style-type: none;
+        margin-right: 1em;
+        &.active {
+          background-color: #5CB85C;
+          color: #fff;
+          border-color: #2B892B;
+        }
+      }
+    }
+  }
+  .payment-errors p {
+    font-size: 17px;
+    line-height: 1.2em;
+    padding: 2px 15px;
+    color: #A00202;
+  }
+  .icon-next::before{
+    content: "►";
+  }
+  .icon-prev::before{
+    content: "◄";
+  }
+}
+@include break('xs'){
+  .single-fundraiser > .container-fluid,
+  .single-fundraiser > .container-fluid > .container{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+}
